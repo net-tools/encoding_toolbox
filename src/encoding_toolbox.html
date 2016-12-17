@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Encoding toolbox</title>
+	<meta name="robots" content="noindex, nofollow">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="encoding_toolbox.css" type="text/css" />
+    <script src="encoding_toolbox.js"></script>
+    
+</head>
+
+<body>
+    <div class="body">
+        <div class="content">
+            <div class="body_encoder">
+                <h1>Encoder</h1>
+                <span>Text to encode :</span>
+                <textarea id="textarea_encode"></textarea>
+                <div class="buttons">
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.to('obfuscate'); return false;">Obfuscate</a>
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.to('base64'); return false;">To Base64</a>
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.to('md5'); return false;">To MD5</a>
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.to('sha256'); return false;">To SHA256</a>
+                    <hr>
+                </div>
+                <span>Encoded text :</span>
+                <textarea id="textarea_encoded" readonly onClick="encodingToolbox.gui.selectAll(this);"></textarea>
+            </div>
+            <div class="body_decoder">
+                <h1>Decoder</h1>
+                <span>Text to decode :</span>
+                <textarea id="textarea_decode"></textarea>
+                <div class="buttons">
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.from('obfuscate'); return false;">Un-obfuscate</a>
+                    <hr>
+                    <a href="javascript:void(0)" onclick="encodingToolbox.gui.from('base64'); return false;">From Base64</a>
+                    <hr>
+                </div>
+                <span>Decoded text :</span>
+                <textarea id="textarea_decoded" readonly onClick="encodingToolbox.gui.selectAll(this);"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
